@@ -1,0 +1,201 @@
+body {
+    padding: 5px;
+    /* background-color: #EFEFEF; */
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    /* text-align: center; */
+  }
+
+   td, th {
+    border: 1px solid rgb(184, 184, 184);
+    padding: 8px;
+  }
+
+
+
+ th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    /* background-color: #112B3C; */
+    background-color: #8E3200;
+    
+    color: white;
+  }
+
+ tr:nth-child(even){background-color: #dad6d6;}
+
+ /* tr:hover {background-color: #205375;} */
+ tr:hover {background-color: #b3b6b6;}
+
+
+
+ button {
+	background:linear-gradient(to bottom, #f7924f 5%, #F66B0E 100%);
+	background-color:#fc7f2d;
+	border-radius:10px;
+	border:1px solid #eb640a;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:0.8rem;
+	padding:12px 37px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+    margin-left: 20px;
+}
+
+.eliminar{
+    background:linear-gradient(to bottom, #dd6445 5%, #e23c09 100%);
+    border:1px solid #d33606;
+}
+
+button:hover {
+	background:linear-gradient(to bottom, #eb8a4a 5%, #be4e02 100%);
+	background-color:#fc7f2d;
+}
+
+.eliminar:hover {
+	background:linear-gradient(to bottom, #dd6c50 5%, #ac2a03 100%);
+	background-color:#d33606;
+}
+
+
+button:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+
+/* -----------------------         MODAL      ---------------------------------------------------    */ 
+
+
+
+
+body{
+    font-family:sans-serif;
+    color:#333;
+  }
+
+  .btn-container{
+      text-align: center;
+  }
+ 
+
+  .btn-add{
+      background:linear-gradient(to bottom, #a04210 5%, #8E3200 100%);
+      border:1px solid #7a2b00;
+      font-weight: bold;
+      font-size:1rem;
+      margin: 50px;
+  }
+
+  .btn-add:hover {
+    background:linear-gradient(to bottom, #833a12 5%, #772a00 100%);
+	background-color:#8E3200;
+  }
+
+
+  .btn {
+    background: #428bca;
+    border: #357ebd solid 0px;
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    padding: 8px 15px;
+    text-decoration: none;
+    text-align: center;
+    min-width: 60px;
+    position: relative;
+    transition: color .1s ease;
+  }
+  .btn:hover {
+    background: #357ebd;
+  }
+
+  .btn-close {
+    color: #aaaaaa;
+    font-size: 20px;
+    text-decoration: none;
+    padding:10px;
+    position: absolute;
+    right: 7px;
+    top: 0;
+  }
+  .btn-close:hover {
+    color: #919191;
+  }
+  .modale:before {
+    content: "";
+    display: none;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+  }
+  .opened:before {
+    display: block;
+  }
+  .opened .modal-dialog {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    top: 20%;
+  }
+  .modal-dialog {
+    background: #fefefe;
+    border: #333333 solid 0px;
+    border-radius: 5px;
+    margin-left: -200px;
+    text-align:center;
+    position: fixed;
+    left: 50%;
+    top: -100%;
+    z-index: 11;
+    width: 360px;
+    box-shadow:0 5px 10px rgba(0,0,0,0.3);
+    -webkit-transform: translate(0, -500%);
+    -ms-transform: translate(0, -500%);
+    transform: translate(0, -500%);
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    -moz-transition: -moz-transform 0.3s ease-out;
+    -o-transition: -o-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+  }
+  .modal-body {
+    padding: 20px;
+  }
+  .modal-body input{
+    width:200px;
+    padding:8px;
+    border:1px solid #ddd;
+    color:#888;
+    outline:0;
+    font-size:14px;
+    font-weight:bold
+  }
+  .modal-header,
+  .modal-footer {
+    padding: 10px 20px;
+  }
+  .modal-header {
+    border-bottom: #eeeeee solid 1px;
+  }
+  .modal-header h2 {
+    font-size: 1.2rem;
+  }

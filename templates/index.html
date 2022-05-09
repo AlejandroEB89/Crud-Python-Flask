@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
+    <script src= "{{ url_for('static', filename='scripts.js') }}"></script>
+    <title>Sistema CRUD</title>
+</head>
+
+<body>
+    <h1> Gestión de Clientes</h1>
+
+    <table> 
+        <thead>
+            <tr>
+                <th> Nombre </th>
+                <th> Apellido </th>
+                <th> Teléfono </th>
+                <th> Email </th>
+                <th> Acciones </th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+
+
+        </tbody>
+    </table>
+
+
+    <!-- Modal -->
+    <div id="modal" class="modale" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-header">
+            <h2 id="modalTitle">Agregar Cliente</h2>
+            <a onclick="closeModal()" href="#" class="btn-close closemodale" aria-hidden="true">&times;</a>
+        </div>
+        <div class="modal-body">
+            <input id="id" type="hidden"  placeholder="ID" size="20" /><br>
+            <input id="nombre" type="text"  placeholder="Nombre" size="20" /><br>
+            <input id="apellido" type="text"  placeholder="Apellido" size="20" /><br>
+            <input id="tel" type="text"  placeholder="Teléfono" size="20" /><br>
+            <input id="email" type="text"  placeholder="Email" size="20" /><br>
+        <div class="modal-footer">
+        
+    
+            <button onclick="saveClient()" class="btn-add" id="btn_ingresar">Guardar</button>
+        </div>
+        </div>
+    </div>
+    <!-- /Modal -->
+    <div class="btn-container">
+        <button class="btn-add" onclick="addClient()"> Agregar Cliente </button>
+    </div>
+   </div>
+</body>
+</html>
